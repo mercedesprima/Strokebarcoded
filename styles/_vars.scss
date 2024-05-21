@@ -1,0 +1,25 @@
+$header_footer_color: #EAECED;
+$background_common: #F4F6F5;
+$button_color: #DFE2E3;
+$button_color_cart: #5DB52C;
+$button_color_hover_focus: #FFFFFF;
+$button_color_active: #D5D8D8;
+$text_color_1: #2C2D35;
+$text_color_2: #86928B;
+$button_bgc_nav_active: #C0C4C4;
+$line_color: #C3D1C6;
+
+@mixin button {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: .3s;
+}
+
+@mixin font_styles {
+    color: $text_color_1;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

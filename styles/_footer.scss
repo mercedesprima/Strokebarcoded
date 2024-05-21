@@ -1,0 +1,174 @@
+.center {
+    padding-left: calc(50% - 550px);
+    padding-right: calc(50% - 550px);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $header_footer_color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 20px;
+        font-weight: 700;
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .line {
+        display: none;
+    }
+    }
+    &__nav {
+        display: flex;
+        gap: 60px;
+        scroll-behavior: smooth;
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__li {
+        list-style-type: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include font_styles;
+        font-size: 20px;
+        
+            &:hover {
+                color: $text_color_1;
+            }
+
+            &:focus {
+                background-color: $header_footer_color;
+            }
+
+            &:active {
+                color: $button_bgc_nav_active;            
+            }
+    }
+ 
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    &__social-link-box {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 10px;
+        }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        
+            &:focus {
+                background-color: $header_footer_color;
+            }
+            
+            &:hover svg path {
+                fill: $text_color_1;
+            }
+
+            &:focus svg path {
+                fill: $text_color_1;
+                }
+
+            &:active svg path {
+                fill: $button_bgc_nav_active;
+                }
+                &__-box {
+                    display: flex;
+                    gap: 30px;
+                    margin-bottom: 10px;
+                    }
+    }
+}
+
+.logo__text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include font_styles;
+    color: $text_color_1;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+
+    .center {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .footer {
+        &__link {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width:700px) {
+
+    .footer {    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 0px;
+
+        &__nav {
+            width: 100%;
+            gap: 0;
+            justify-content: space-between;  
+            margin-right: 30px;        
+        }
+
+        &__container {
+            justify-content: space-between;
+            width: 100%;
+            gap: 0; 
+        }
+    }
+}
+
+@media (max-width: 460px) {
+
+    .footer {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: $background_common;
+
+        &__nav {
+            display: none;
+        }
+
+        &__container {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,540 @@
+@import 'vars';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            height:100%
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+// .logo {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     @include font_styles;
+//     color: $text_color_1;
+//     font-size: 20px;
+//     font-weight: 700;
+// }
+
+// .line {
+//     display: none;
+// }
+
+.basket {
+    margin-bottom: 130px;
+
+    &__title {
+        margin-top: 45px;
+        margin-bottom: 45px;
+        padding-left: 30px;
+        @include font_styles;
+        font-size: 50px;
+        line-height: 110%; /* 66px */
+    }
+
+    &__catalog {
+        width: 70%;
+    }
+
+    &__order-cover {
+        width: 40%;
+    }
+
+    &__button-clean {
+        display: flex;
+        justify-content: right;
+        gap: 10px;
+        margin-bottom: 6px;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    &__trash-icon {
+        cursor: pointer;
+
+        &:hover path {
+            fill: $text_color_1;
+        }
+    }
+
+    &__button-text {
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 16px;
+        cursor: auto;
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #f4f6f7;
+        padding: 12px 18px;      
+    }
+
+    &__order-li {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__order-text {
+        margin-bottom: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__order-items {
+        @include font_styles;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    &__order-total, &__order-total-text {
+        @include font_styles;
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    &__empty {
+        flex-direction: column;
+        align-items: center;
+        font-size: 70;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    &__img-box {
+        width: 700px;
+        overflow: hidden;
+        margin-bottom: 45px;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__message-main {
+        @include font_styles;
+        font-size: 36px;
+        line-height: 150%; 
+        margin-bottom: 20px;
+    }
+
+    &__full {
+        display: flex;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    &__order-button {
+        @include button;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        background-color: $text_color_1;
+        color: $background_common;
+        cursor: pointer;
+        margin-bottom: 20px;
+     
+            &:hover {
+                border: solid 1px transparent;
+                filter: brightness(1.15);
+            }
+    }
+}
+
+.card {
+
+    &__cover {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__img-box {
+        width: 100px;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    &__count {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        align-items: center;
+        padding: 2px;
+    }
+
+    &__unit-qty {
+        border: 1px solid $text_color_1;
+        padding: 3px 5px;
+        color: $text_color_1;
+        border-radius: 4px;
+        width: 50px;
+        text-align: center;
+    }
+
+    &__button-qty {
+        padding: 3px 5px;
+    }
+
+    &__line {
+        width: 100%;
+        border: 1px solid $text_color_1;
+        margin-bottom: 20px;
+    }
+
+    &__author {
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 16px;
+     }
+
+    &__name {
+        margin-bottom: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 25px;
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+        @include font_styles;
+        font-size: 18px;
+        width: 200px;
+    }
+
+    &__price {
+        margin-bottom: 20px;
+        @include font_styles;
+        color: $text_color_1;        
+        font-size: 20px;
+    }
+
+    &__price-subtotal {
+        margin-bottom: 10px;
+        @include font_styles;
+        color: $text_color_1;        
+        font-size: 22px;
+    }
+
+    &__price-subtotal::after {
+        content: " \20BD";
+    }
+
+    &__button, &__button-qty {
+        @include button;
+        padding: 4px 8px;
+        background-color: $background_common;
+        color: $text_color_1;
+        border: solid 1px $text_color_1;
+        border: solid 1px transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: $text_color_1;
+            color: $background_common;
+            border: solid 1px transparent;
+        }
+        &:focus {
+            background-color: $header_footer_color;
+            color: $text_color_1;
+            border: solid 1px $text_color_1;
+        }
+        &:active {
+            background-color: $button_bgc_nav_active;
+            color: $background_common;
+            border: solid 1px transparent;
+        }
+    }
+
+    &__button {
+        font-size: 14px;
+        padding: 2px 4px;
+    }
+
+    &__button-qty {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
+
+    &__button-qty-left {
+        @include button;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-color: $background_common;        
+        border: solid 1px transparent;
+        border-radius: 4px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    z-index: 1;
+    overflow-y: auto;
+
+    &__window {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        max-width: 450px;
+        background-color: #F4F6F5;
+        transition: 1s;
+        border-radius: 15px;         
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+            &:hover {
+                fill: darkgrey;
+            }
+    }
+
+
+    &__text {
+        margin-bottom: 25px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 25px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        width: 200px;
+        height: 40px;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        padding: 22px 10px;
+
+        &:focus {
+            color: #212529;
+            background-color: #fff;
+            border-color: #bdbdbd;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+        }
+    }
+
+    &__button {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    &__remark {
+        @include font_styles;
+        font-size: 14px;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+}
+
+.ruble-sign::after {
+    content: " \20BD";
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.visible_flex {
+    display: flex;
+}
+
+@media (max-width:768px) {
+
+    .visible_flex {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .basket {
+        &__catalog {
+            width: 100%;
+        }
+
+        &__order-cover {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width:600px) {
+
+    .card {    
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .card {    
+        &__cover {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__desc {
+            width: auto;
+        }
+
+        &__delete {
+            display: flex;
+            gap: 15px;
+        }
+
+        &__price-subtotal {
+            vertical-align: middle;
+            margin-bottom: 0;
+        }
+
+        &__count {
+            margin-bottom: 30px;
+        }
+    }
+
+    .modal {
+        &__button {
+            width: 150px;
+        }
+
+        &__input {
+            width: 150px;            
+        }
+    }
+
+    .basket {
+        &__img-box {
+            width: 180px;
+            margin-bottom: 20px;
+            }
+
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        &__message, &__message-main {
+            font-size: 18px;
+        }
+
+        &__message-main {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-height: 450px) {
+    .basket {
+
+        &__message-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img-box {
+            padding-left: 30px;
+            width: 150px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            }
+        
+        &__empty {
+            flex-direction: row;
+            gap: 0;
+        }
+        
+        &__title {
+            margin-top: 35px;
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
+        
+        &__message, &__message-main {
+            font-size: 18px;
+            }
+    
+        &__message-main {
+            font-size: 28px;
+            margin-bottom: 5px;
+            }
+        }
+}

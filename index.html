@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/basketCounter.js" defer></script>
+    <script src="scripts/tabs.js" defer></script>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="logo">
+            <a href="index.html" class="header__link"><img src="images/logo.svg" alt="Logo icon"
+                    class="logo__image"></a>
+            <a href="index.html" class="logo__text">Арт-сервис Штрихкод</a>
+
+        </div>
+
+        <div class="header__container">
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="index.html#catalog" class="header__link">Каталог</a>
+                    </li>
+                    <li class="header__li"><a href="index.html#new" class="header__link">Новинки</a></li>
+                    <li class="header__li"><a href="authors.html" class="header__link">Наши авторы</a></li>
+                    <li class="header__li"><a href="index.html#about" class="header__link">О&nbsp;нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__basket-box">
+                <a href="basket.html" class="header__link"> <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32" viewBox="0 0 22 22" fill="none">
+                        <g clip-path="url(#clip0_9102_102)">
+                            <path
+                                d="M8.25001 20.1667C8.75627 20.1667 9.16668 19.7563 9.16668 19.25C9.16668 18.7438 8.75627 18.3334 8.25001 18.3334C7.74375 18.3334 7.33334 18.7438 7.33334 19.25C7.33334 19.7563 7.74375 20.1667 8.25001 20.1667Z"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M18.3333 20.1667C18.8396 20.1667 19.25 19.7563 19.25 19.25C19.25 18.7438 18.8396 18.3334 18.3333 18.3334C17.8271 18.3334 17.4167 18.7438 17.4167 19.25C17.4167 19.7563 17.8271 20.1667 18.3333 20.1667Z"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M0.916656 0.916626H4.58332L7.03999 13.1908C7.12381 13.6128 7.35341 13.9919 7.68857 14.2617C8.02374 14.5315 8.44313 14.6749 8.87332 14.6666H17.7833C18.2135 14.6749 18.6329 14.5315 18.9681 14.2617C19.3032 13.9919 19.5328 13.6128 19.6167 13.1908L21.0833 5.49996H5.49999"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clippath id="clip0_9102_102">
+                                <rect width="22" height="22" fill="white" />
+                            </clippath>
+                        </defs>
+                    </svg></a>
+                <div class="header__basket">
+                    <p class="basket-counter"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="top center">
+            <div class="top__image-box">
+                <img src="images/UlugbekDoschanov_bird.jpg" alt="Top_img - Bird" class="top__image">
+            </div>
+            <div class="top__content ">
+                <h1 class="top__title">Наша миссия</h1>
+                <h2>познакомить коллекционеров и просто ценителей искусства с произведениями талантливых художников и
+                    фотографов.</h2>
+                <p class="top__text">Гарантируем высокое качество отрисовки на&nbsp;плотной бумаге или льняном холсте,
+                    малые тиражи и эксклюзивность работ.</p>
+                <form action="catalog.html">
+                    <button class="top__button">Каталог</button>
+                </form>
+
+            </div>
+        </section>
+        <section class="catalog center">
+            <div class="catalog__heading">
+                <h2 id="catalog" class="catalog__title">Работы авторов</h2>
+                <div class="tab">
+                    <button class="tab__button tab--active">Глеб Баранов</button>
+                    <button class="tab__button ">Антон Лялин</button>
+                    <button class="tab__button">Марк Марков-Гринберг</button>
+                </div>
+            </div>
+            <div class="catalog__box">
+                <div class="catalog__items content--active">
+                    <div class="card baranov" data-number="1" data-price="64500">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_1.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Ангелы и шкатулка</h3>
+                        <p class="card__desc">Холст, темпера</p>
+                        <p class="card__price">64&nbsp;500 руб</p>
+                        <button class="card__button">В корзину</button>
+                    </div>
+                    <div class="card baranov" data-number="2" data-price="36500">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_2.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Ангел сновидений</h3>
+                        <p class="card__desc">Холст, темпера </p>
+                        <p class="card__price">36&nbsp;500 руб</p>
+                        <button class="card__button">В корзину</button>
+                    </div>
+                    <div class="card baranov" data-number="3" data-price="30000">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_3.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Черный ангел</h3>
+                        <p class="card__desc">Холст, темпера </p>
+                        <p class="card__price">30&nbsp;000 руб</p>
+                        <button class="card__button">В корзину</button>
+                    </div>
+                    <div class="card baranov" data-number="4" data-price="120000">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_4.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Ангелы и шатер</h3>
+                        <p class="card__desc">Холст, темпера </p>
+                        <p class="card__price">120&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card baranov" data-number="5" data-price="40000">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_5.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Ангелы и шкатулка</h3>
+                        <p class="card__desc">Холст, темпера </p>
+                        <p class="card__price">40&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card baranov" data-number="6" data-price="45000">
+                        <div class="card__img-box">
+                            <img src="images/GlebBaranov/Gleb_Baranov_6.jpeg" alt="Gleb Baranov" class="card__img">
+                        </div>
+                        <p class="card__author">серия «Kingdom of Angels»</p>
+                        <h3 class="card__name">Синий ангел</h3>
+                        <p class="card__desc"> Холст, темпера, акрил </p>
+                        <p class="card__price">45&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog__items ">
+                    <div class="card lyalin" data-number="7" data-price="35000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_1.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки""</p>
+                        <h3 class="card__name">Портрет №1</h3>
+                        <p class="card__desc">Печать архивными чернилами на хлопковой бумаге</p>
+                        <p class="card__price">35&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card lyalin" data-number="8" data-price="60000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_2.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки"</p>
+                        <h3 class="card__name">Портрет №2</h3>
+                        <p class="card__desc">Печать архивными чернилами на хлопковой бумаге</p>
+                        <p class="card__price">60&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card lyalin" data-number="9" data-price="120000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_3.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки"</p>
+                        <h3 class="card__name">Портрет №3</h3>
+                        <p class="card__desc">Печать архивными чернилами на хлопковой бумаге</p>
+                        <p class="card__price">120&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card lyalin" data-number="10" data-price="110000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_4.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки"</p>
+                        <h3 class="card__name">Портрет №4</h3>
+                        <p class="card__desc">Печать архивными чернилами на хлопковой бумаге</p>
+                        <p class="card__price">110&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card lyalin" data-number="11" data-price="90000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_5.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки"</p>
+                        <h3 class="card__name">Дятлы</h3>
+                        <p class="card__desc">Портрет №5</p>
+                        <p class="card__price">90&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card lyalin" data-number="12" data-price="110000">
+                        <div class="card__img-box">
+                            <img src="images/AntonLyalin/Anton_Lyalin_6.jpeg" alt="Lyalin" class="card__img">
+                        </div>
+                        <p class="card__author">серия "Портреты Африки"</p>
+                        <h3 class="card__name">Портрет №6</h3>
+                        <p class="card__desc">Печать архивными чернилами на хлопковой бумаге </p>
+                        <p class="card__price">110&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog__items">
+                    <div class="card markov_grinberg" data-number="13" data-price="59000">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_1.jpg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">Встреча иностранной делегации</h3>
+                        <p class="card__desc">Печать с авторского негатива </p>
+                        <p class="card__price">59&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card markov_grinberg" data-number="14" data-price="75000">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_2.jpeg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">На первом воздушном параде в Тушино</h3>
+                        <p class="card__desc">Печать с авторского негатива</p>
+                        <p class="card__price">75&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card markov_grinberg" data-number="15" data-price="120500">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_3.jpeg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">Портрет шахтера Никиты Изотова</h3>
+                        <p class="card__desc">Печать с авторского негатива</p>
+                        <p class="card__price">120&nbsp;500 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card markov_grinberg" data-number="16" data-price="55000">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_4.jpeg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">Девушка с веслом</h3>
+                        <p class="card__desc">Печать с авторского негатива</p>
+                        <p class="card__price">55&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card markov_grinberg" data-number="17" data-price="70500">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_5.jpeg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">Молодость</h3>
+                        <p class="card__desc">Печать с авторского негатива</p>
+                        <p class="card__price">70&nbsp;500 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                    <div class="card markov_grinberg" data-number="18" data-price="91000">
+                        <div class="card__img-box">
+                            <img src="images/Markov_Grinberg/Markov_Grinberg_6.jpg" alt="Markov-Grinberg"
+                                class="card__img">
+                        </div>
+                        <p class="card__author">Советская жизнь</p>
+                        <h3 class="card__name">Повариха</h3>
+                        <p class="card__desc">Печать с авторского негатива </p>
+                        <p class="card__price">91&nbsp;000 руб</p>
+                        <button class="card__button"> В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="new-author center">
+            <div class="new-author__heading-box">
+                <h2 id="new" class="new-author__title">Серия "Цунами" Сигэру Ёсида</h2>
+            </div>
+            <p class="new-author__text new-author__text_mb">Я не могу восстановить жизнь выживших или пострадавших
+                людей.
+                Но я могу бросить небольшой камень в воду, чтобы от него пошли круги.
+                Мой камень – этот проект.<br>
+                <i>Сигэру Ёсида</i>
+            </p>
+            <form action="newAuthor.html">
+                <button class="new-author__button">Посмотреть</button>
+            </form>
+        </section>
+        <section class="authors center">
+            <div class="authors__img-box">
+            </div>
+            <div class="authors__content">
+                <a class="authors__link" href="authors.html">
+                    <h2 id="about" class="authors__title">Мы и наши авторы</h2>
+                </a>
+                <p class="authors__text">Пришло время заново рассказать об арт-сервисе Штрихкоd.
+
+                    Мы pаботаем с коллекционной фотографией, графикой и офортами современных авторов.
+
+                    10 лет работы в музейных и галерейных институциях позволяют понимать всех участников процесса.
+
+                    Наш приоритет - длительные отношения с коллекционерами. <br><br />
+                    Так что же мы делаем?<br><br />
+
+                    - Формируем частные и корпоративные коллекции, готовим предложение специально для Вас.<br>
+
+                    - Печатаем и оформляем на галерейном уровне. <br>
+
+                    - Сопровождаем работы сертификатами с атрибуцией и подписью авторов.<br>
+
+                    - Сотрудничаем с дизайнерами интерьеров и архитекторами. <br>
+                    <br />
+                    Связаться с нами: <b>+7 (965) 196-44-99</b>
+                </p>
+
+                <div class="authors__img-box">
+                    <img src="images/authors/KR.jpg" alt="authors member image" class="authors__img-persons">
+                    <img src="images/authors/KM.jpg" alt="authors member image" class="authors__img-persons">
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer center">
+        <div class="logo">
+            <a href="index.html" class="footer__link"><img src="images/logo.svg" alt="Logo icon"
+                    class="logo__image"></a>
+            <a href="index.html" class="logo__text">Арт-сервис Штрихкод</a>
+
+        </div>
+        <div class="footer__container">
+            <nav class="footer__nav">
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="index.html#catalog" class="header__link">Каталог</a>
+                    </li>
+                    <li class="footer__li"><a href="index.html#new" class="header__link">Новинки</a></li>
+                    <li class="footer__li"><a href="authors.html" class="header__link">Наши авторы</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__social-link-box">
+            <a href="https://t.me/strokebarcoded" class="footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24"
+                    height="24">
+                    <path
+                        d="M13.987,6.108c-.039.011-7.228,2.864-7.228,2.864a2.76,2.76,0,0,0,.2,5.212l2.346.587.773,2.524A2.739,2.739,0,0,0,12.617,19h.044a2.738,2.738,0,0,0,2.532-1.786s2.693-7.165,2.7-7.2a3.2,3.2,0,0,0-3.908-3.907ZM15.97,9.467,13.322,16.51a.738.738,0,0,1-.692.49c-.1-.012-.525-.026-.675-.378l-.908-2.976a1,1,0,0,0-.713-.679l-2.818-.7a.762.762,0,0,1-.027-1.433l7.06-2.8a1.149,1.149,0,0,1,1.094.32A1.19,1.19,0,0,1,15.97,9.467ZM12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/masheeva_shtrihkod?igsh=N2cwMzB2Y3Y1eWh4" class="footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
+                    xml:space="preserve" width="24" height="24">
+                    <g>
+                        <path
+                            d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" />
+                        <path
+                            d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
+                        <circle cx="18.406" cy="5.594" r="1.44" />
+                    </g>
+                </svg></a>
+        </div>
+    </footer>
+</body>
+
+</html>
