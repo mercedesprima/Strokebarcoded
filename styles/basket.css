@@ -171,7 +171,6 @@
   .header {
     padding-left: 0;
     padding-right: 0;
-    background-color: #F4F6F5;
   }
   .header__nav {
     display: none;
@@ -179,6 +178,7 @@
   .header__container {
     padding-top: 16px;
     padding-bottom: 16px;
+    display: contents;
   }
   .header__basket-box {
     margin-right: 3%;
@@ -335,14 +335,15 @@
   .footer {
     padding-left: 0;
     padding-right: 0;
-    background-color: #F4F6F5;
+    padding-bottom: 32px;
+    gap: 5px;
   }
   .footer__nav {
     display: none;
   }
   .footer__container {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
 .fade-in {

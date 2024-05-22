@@ -507,9 +507,16 @@ body {
         &__title, &_title-span  {
             font-size: 30px;
         }
+        &__subtitle{
+            display: flex;
+            align-items: center;
+        }
   
         &__content {
             margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         &__text {
@@ -519,6 +526,10 @@ body {
     }
 
     .catalog {
+        &__heading {
+            display: flex;
+            flex-direction: column;
+        }
         &__title {
             font-size: 24px;
         }

@@ -68,19 +68,19 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    @include font_styles;
-    color: $brand_nav-hr_color;
-    font-size: 20px;
-    font-weight: 700;
-}
+// .logo {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     @include font_styles;
+//     color: $brand_nav-hr_color;
+//     font-size: 20px;
+//     font-weight: 700;
+// }
 
-.line {
-    display: none;
-}
+// .line {
+//     display: none;
+// }
 
 
 .authors {

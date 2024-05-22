@@ -160,15 +160,17 @@
     .footer {
             padding-left: 0;
             padding-right: 0;
-            background-color: $background_common;
+            padding-bottom: 32px;
+            gap: 5px;
+            // background-color: $background_common;
 
         &__nav {
             display: none;
         }
 
         &__container {
-            padding-top: 16px;
-            padding-bottom: 16px;
+            padding-top: 6px;
+            padding-bottom: 6px;
         }
     }
 }
